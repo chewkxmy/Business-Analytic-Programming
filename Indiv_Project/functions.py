@@ -18,15 +18,17 @@ def calculate_tax(income, tax_relief):
     
     # Simplified progressive tax rate
     if taxable_income <= 5000:
-        tax_payable = taxable_income * 0.01
+        tax_payable = 0
     elif taxable_income <= 20000:
-        tax_payable = 5000 * 0.01 + (taxable_income - 5000) * 0.03
+        tax_payable = (taxable_income - 5000) * 0.01
     elif taxable_income <= 35000:
-        tax_payable = 5000 * 0.01 + 15000 * 0.03 + (taxable_income - 20000) * 0.08
+        tax_payable = 15000 * 0.01 + (taxable_income - 20000) * 0.03
     elif taxable_income <= 50000:
-        tax_payable = 5000 * 0.01 + 15000 * 0.03 + 15000 * 0.08 + (taxable_income - 35000) * 0.14
+        tax_payable = 15000 * 0.01 + 15000 * 0.03 + (taxable_income - 35000) * 0.6
+    elif tax_payable <=70000
+        tax_payable = 15000 * 0.01 + 15000 * 0.03 + 15000 * 0.6 + (taxable_income - 50000) * 0.11
     else:
-        tax_payable = 5000 * 0.01 + 15000 * 0.03 + 15000 * 0.08 + 15000 * 0.14 + (taxable_income - 50000) * 0.21
+        tax_payable = 15000 * 0.01 + 15000 * 0.03 + 15000 * 0.6 + 20000 * 0.11 + (taxable_income - 70000) * 0.19
     
     return max(0, tax_payable)
 
