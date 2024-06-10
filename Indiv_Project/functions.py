@@ -25,7 +25,7 @@ def calculate_tax(income, tax_relief):
         tax_payable = 15000 * 0.01 + (taxable_income - 20000) * 0.03
     elif taxable_income <= 50000:
         tax_payable = 15000 * 0.01 + 15000 * 0.03 + (taxable_income - 35000) * 0.6
-    elif tax_payable <=70000
+    elif tax_payable <=70000:
         tax_payable = 15000 * 0.01 + 15000 * 0.03 + 15000 * 0.6 + (taxable_income - 50000) * 0.11
     else:
         tax_payable = 15000 * 0.01 + 15000 * 0.03 + 15000 * 0.6 + 20000 * 0.11 + (taxable_income - 70000) * 0.19
