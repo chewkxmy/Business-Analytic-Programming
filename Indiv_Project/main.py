@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from functions import verify_user, calculate_tax, save_to_csv, read_from_csv
 
