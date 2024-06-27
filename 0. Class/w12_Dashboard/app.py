@@ -3,7 +3,7 @@ import second_page as sp
 import streamlit as st
 
 def main():
-    st.sidebar.title("menu")
+    st.sidebar.title("Menu")
     selection=st.sidebar.radio(
         "Go to",
         ("Page 1", "Page 2")
